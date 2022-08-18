@@ -2266,6 +2266,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-color: rgba(0, 255, 140, 0.95);
 }
 
+.bg-green2{
+	background-color: rgb(2, 253, 128);
+}
+
+
 .decoration-slice{
     -webkit-box-decoration-break: slice !important;
             box-decoration-break: slice !important;
