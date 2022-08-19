@@ -425,6 +425,15 @@ Ensure the default browser behavior of the `hidden` attribute.
         padding-left: 13rem;
     }
 }
+
+.green-text{
+ color: #00FF8CF2;
+}
+
+.black-background{
+	background-color: rgba(31, 31, 31, 0.95);
+}
+
 .sr-only{
     position: absolute !important;
     width: 1px !important;

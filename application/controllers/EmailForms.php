@@ -13,18 +13,24 @@ class EmailForms extends CI_Controller{
 		$message = $this->form_validation->set_rules('message', 'Message', 'required');
 
 
+		/*
 		$this->form_validation->set_error_delimiters(
 			'<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong class="uppercase"><bdi>Error</bdi></strong> &nbsp;',
 			'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
 		);
-
+		*/
 
 		if($this->form_validation->run() === FALSE)
 		{
+			$this->session->set_flashdata('error', 'Email has been sent.');
+
+			redirect(base_url() . 'contact');
+			/*
 			$this->load->view('templates/header');
 			$this->load->view('templates/navbar');
 			$this->load->view('pages/contact' , $data); //loading page and data
 			$this->load->view('templates/footer');
+			*/
 		}
 		else
 		{

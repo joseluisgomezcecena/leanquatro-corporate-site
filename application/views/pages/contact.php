@@ -2,13 +2,50 @@
 <section class="bg-green2 relative md:py-24 py-16 overflow-hidden" style="background: url('<?php echo base_url() ?>assets/images/app/bg.png') top no-repeat fixed;">
 	<div class="absolute inset-0 bg-green opacity-80"></div>
 
-	<div class="grid grid-cols-4 sm:grid-cols-1  gap-4 items-center justify-center container mb-5">
 
+	<div  class="alerts   grid grid-cols-4 sm:grid-cols-1  gap-4 items-center justify-center container mb-5">
+			<?php if(isset($_SESSION['success'])): ?>
+
+				<div id="success-msg" class=" green-text mt-12 w-full  black-background rounded-md shadow-xl px-6 py-8">
+
+				<h2 class="font-semibold text-gray-800">Message Sent</h2>
+				<p class="mt-2 text-sm text-gray-600 leading-relaxed">Your message was sent we'll get back to you ASAP.</p>
+				<br/>
+				<button id="success-btn" class="btn bg-white text-dark hover:text-white hover:bg-success-600 rounded-md w-full justify-center flex items-center">Ok</button>
+			</div>
+			<?php endif; ?>
+
+			<?php if(isset($_SESSION['error'])): ?>
+			<div id="error-msg" class="mt-12 w-full  black-background rounded-md shadow-xl px-6 py-8">
+
+				<h2 class="font-semibold text-white">There was an error.</h2>
+				<p class="mt-2 text-sm text-white leading-relaxed"><?php echo validation_errors() ?></p>
+				<br/>
+				<button id="error-btn" class="btn bg-danger-600 text-white hover:text-danger-600 hover:bg-white rounded-md w-full justify-center flex items-center">Ok</button>
+
+				<?php
+
+				?>
+			</div>
+			<?php endif; ?>
+	</div>
+
+
+
+
+
+
+
+	<div class="grid grid-cols-4 sm:grid-cols-1  gap-4 items-center justify-center container mb-5">
 		<div class="mt-12 w-full  bg-white rounded-md shadow-xl px-6 py-8">
+
+
+
+
 			<a href="index.html"><img src="<?php  echo base_url() ?>assets/images/app/favicon-01.png" class="mx-auto" alt=""></a>
 			<h3 class="my-6 text-2xl leading-normal font-medium text-center">Get in touch !</h3>
 
-			<?php echo form_open('emailforms/send') ?>
+			<?php echo form_open(base_url() . 'emailforms/send') ?>
 			<!--
 			<form method="post" name="myForm" id="myForm" onsubmit="return validateForm()">
 			-->
@@ -75,3 +112,17 @@
 	</div>
 </div>
 <!-- End Section-->
+<script
+		src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous"></script>
+<script>
+
+	$( "#success-btn" ).click(function() {
+		$("#success-msg").fadeOut(500);
+	});
+
+	$( "#error-btn" ).click(function() {
+		$("#error-msg").fadeOut(500);
+	});
+</script>
