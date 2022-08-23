@@ -2,7 +2,7 @@
 <nav id="topnav" class="defaultscroll is-sticky">
 	<div class="container">
 		<!-- Logo container-->
-		<a class="logo" href="index.html">
+		<a class="logo" href="<?php echo base_url() ?>">
                     <span class="logo-light-mode">
                         <img src="<?php echo base_url() ?>assets/images/app/logoweb-dark-01.png" class="l-dark" height="24" alt="">
                         <img src="<?php echo base_url() ?>assets/images/app/light-01.png" class="l-light" height="24" alt="">
