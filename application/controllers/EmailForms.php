@@ -7,10 +7,10 @@ class EmailForms extends CI_Controller{
 		$data['title'] = 'Send Email';
 
 
-		$name = $this->form_validation->set_rules('name', 'Name', 'required');
-		$email = $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-		$subject = $this->form_validation->set_rules('subject', 'Subject', 'required|min_length[5]');
-		$message = $this->form_validation->set_rules('message', 'Message', 'required|min_length[5]');
+		$this->form_validation->set_rules('name', 'Name', 'required');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+		$this->form_validation->set_rules('subject', 'Subject', 'required|min_length[5]');
+		$this->form_validation->set_rules('message', 'Message', 'required|min_length[5]');
 
 
 		if($this->form_validation->run() === FALSE)
@@ -23,8 +23,8 @@ class EmailForms extends CI_Controller{
 		{
 
 			$to = "info@leanquatro.com";
-			$subject = "$subject";
-			$message = "$message  <br>$name<br>$email";
+			$subject = "Contact Form Message";
+			$message = $this->input->post('message') . "\r\n\r\n" . "From: " . $this->input->post('name') . " <" . $this->input->post('email') . ">";
 			$headers = "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 			$headers .= 'From: <info@leanquatro.com>' . "\r\n";

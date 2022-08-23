@@ -4,7 +4,7 @@
 
 
 	<div  class="alerts   grid grid-cols-4 sm:grid-cols-1  gap-4 items-center justify-center container mb-5">
-			<?php if($this->session->flashdata('success')): ?>
+			<?php if($this->session->flashdata('sent')): ?>
 
 				<div id="success-msg" class=" green-text mt-12 w-full  black-background rounded-md shadow-xl px-6 py-8">
 
@@ -59,7 +59,7 @@
 							<label for="name" class="font-semibold">Your Name:</label>
 							<div class="form-icon relative mt-2">
 								<i data-feather="user" class="w-4 h-4 absolute top-3 left-4"></i>
-								<input name="name" id="name" type="text" class="form-input pl-11" placeholder="Name :">
+								<input name="name" id="name" type="text" class="form-input pl-11" placeholder="Name :" required>
 							</div>
 						</div>
 					</div>
@@ -69,7 +69,7 @@
 							<label for="email" class="font-semibold">Your Email:</label>
 							<div class="form-icon relative mt-2">
 								<i data-feather="mail" class="w-4 h-4 absolute top-3 left-4"></i>
-								<input name="email" id="email" type="email" class="form-input pl-11" placeholder="Email :">
+								<input name="email" id="email" type="email" class="form-input pl-11" placeholder="Email :" required>
 							</div>
 						</div>
 					</div>
@@ -81,7 +81,7 @@
 							<label for="subject" class="font-semibold">Your Question:</label>
 							<div class="form-icon relative mt-2">
 								<i data-feather="book" class="w-4 h-4 absolute top-3 left-4"></i>
-								<input name="subject" id="subject" class="form-input pl-11" placeholder="Subject :">
+								<input name="subject" id="subject" class="form-input pl-11" placeholder="Subject :" required>
 							</div>
 						</div>
 					</div>
@@ -91,7 +91,7 @@
 							<label for="comments" class="font-semibold">Your Comment:</label>
 							<div class="form-icon relative mt-2">
 								<i data-feather="message-circle" class="w-4 h-4 absolute top-3 left-4"></i>
-								<textarea name="comments" id="comments" class="form-input pl-11 textarea" placeholder="Message :"></textarea>
+								<textarea name="message" id="comments" class="form-input pl-11 textarea" placeholder="Message :"></textarea>
 							</div>
 						</div>
 					</div>
