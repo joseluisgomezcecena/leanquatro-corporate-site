@@ -34,7 +34,7 @@ class EmailForms extends CI_Controller{
 		}
 		else
 		{
-			$to = "info@leanquatro.com, info@nexussoftwaresolutions.com";
+			$to = "info@leanquatro.com";
 			$subject = "$subject";
 			$message = "$message  <br>$name<br>$email";
 			$headers = "MIME-Version: 1.0" . "\r\n";
