@@ -132,19 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] =
-	array(
-		'UserModel',
-		'HorasModel',
-		'ReportModel',
-		'EntryModel',
-		'LocationModel',
-		'FormModel',
-		'SupModel',
-		'ToolCribModel',
-		'InsertPartsModel',
-		'EngineeringModel',
-		'MachineModel',
-		'ProductionFormModel',
-		'DowntimeModel',
-	);
+//$autoload['model'] =	array('UserModel','HorasModel',);
