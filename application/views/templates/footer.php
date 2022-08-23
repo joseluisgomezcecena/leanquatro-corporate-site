@@ -68,11 +68,7 @@
 				</div>
 
 				<ul class="list-none md:text-right text-center mt-6 md:mt-0">
-					<li class="inline"><a href=""><img src="images/payments/american-ex.png" class="max-h-6 inline" title="American Express" alt=""></a></li>
-					<li class="inline"><a href=""><img src="images/payments/discover.png" class="max-h-6 inline" title="Discover" alt=""></a></li>
-					<li class="inline"><a href=""><img src="images/payments/master-card.png" class="max-h-6 inline" title="Master Card" alt=""></a></li>
-					<li class="inline"><a href=""><img src="images/payments/paypal.png" class="max-h-6 inline" title="Paypal" alt=""></a></li>
-					<li class="inline"><a href=""><img src="images/payments/visa.png" class="max-h-6 inline" title="Visa" alt=""></a></li>
+
 				</ul>
 			</div><!--end grid-->
 		</div><!--end container-->
