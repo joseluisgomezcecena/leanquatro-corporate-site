@@ -1,6 +1,7 @@
 <!-- Start Section-->
 <section class="relative md:py-24 py-16 overflow-hidden">
 	<div class="container mb-5">
+
 		<div class="grid grid-cols-1 pb-8 text-center">
 			<h6 class="text-primary text-sm font-bold uppercase mb-2">Lean Quatro</h6>
 			<h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-bold">Cloud Based Andon System </h3>
@@ -11,6 +12,7 @@
 				reducing downtime and costs.
 			</p>
 		</div><!--end grid-->
+
 
 		<div class="grid md:grid-cols-3 grid-cols-1 mt-8 gap-[30px]">
 			<div class="group p-6 md:px-4 rounded-lg shadow-md hover:shadow border bg-white text-center transition-all duration-500 ease-in-out">
@@ -585,3 +587,14 @@
 	</div>
 </div>
 <!-- End Section-->
+
+
+
+<!-- Start Cookie Popup -->
+<div class="cookie-popup fixed max-w-lg bottom-3 right-3 left-3 sm:left-0 sm:right-0 mx-auto bg-white shadow rounded-md py-5 px-6 z-10">
+	<p class="text-muted-400">This website uses cookies to provide you with a great user experience. By using it, you accept our <a href="https://shreethemes.in" target="_blank" class="text-success-600 font-semibold">use of cookies</a></p>
+	<div class="cookie-popup-actions text-right">
+		<button class="absolute border-none bg-none p-0 cursor-pointer font-semibold top-2 right-2"><i class="uil uil-times text-dark text-2xl"></i></button>
+	</div>
+</div><!--Note: Cookies Js including in plugins.init.js (path like; assets/js/plugins.init.js) and Cookies css including in _helper.scss (path like; scss/_helper.scss)-->
+<!-- End Cookie Popup -->

@@ -8,17 +8,10 @@ class EmailForms extends CI_Controller{
 
 
 		$name = $this->form_validation->set_rules('name', 'Name', 'required');
-		$email = $this->form_validation->set_rules('email', 'Email', 'required');
-		$subject = $this->form_validation->set_rules('subject', 'Subject', 'required');
-		$message = $this->form_validation->set_rules('message', 'Message', 'required');
+		$email = $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+		$subject = $this->form_validation->set_rules('subject', 'Subject', 'required|min_length[5]');
+		$message = $this->form_validation->set_rules('message', 'Message', 'required|min_length[5]');
 
-
-		/*
-		$this->form_validation->set_error_delimiters(
-			'<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong class="uppercase"><bdi>Error</bdi></strong> &nbsp;',
-			'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-		);
-		*/
 
 		if($this->form_validation->run() === FALSE)
 		{
@@ -28,6 +21,7 @@ class EmailForms extends CI_Controller{
 		}
 		else
 		{
+
 			$to = "info@leanquatro.com";
 			$subject = "$subject";
 			$message = "$message  <br>$name<br>$email";
@@ -36,8 +30,6 @@ class EmailForms extends CI_Controller{
 			$headers .= 'From: <info@leanquatro.com>' . "\r\n";
 
 			mail($to,$subject,$message,$headers);
-
-
 
 			//session message
 			$this->session->set_flashdata('sent', 'Email has been sent.');
