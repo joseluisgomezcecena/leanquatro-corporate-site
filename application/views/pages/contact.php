@@ -4,29 +4,31 @@
 
 
 	<div  class="alerts   grid grid-cols-4 sm:grid-cols-1  gap-4 items-center justify-center container mb-5">
-			<?php if(isset($_SESSION['success'])): ?>
+			<?php if($this->session->flashdata('success')): ?>
 
 				<div id="success-msg" class=" green-text mt-12 w-full  black-background rounded-md shadow-xl px-6 py-8">
 
-				<h2 class="font-semibold text-gray-800">Message Sent</h2>
-				<p class="mt-2 text-sm text-gray-600 leading-relaxed">Your message was sent we'll get back to you ASAP.</p>
-				<br/>
-				<button id="success-btn" class="btn bg-white text-dark hover:text-white hover:bg-success-600 rounded-md w-full justify-center flex items-center">Ok</button>
-			</div>
+					<h2 class="font-semibold text-gray-800">Message Sent</h2>
+					<p class="mt-2 text-sm text-gray-600 leading-relaxed">Your message was sent we'll get back to you ASAP.</p>
+					<br/>
+					<button id="success-btn" class="btn bg-white text-dark hover:text-white hover:bg-success-600 rounded-md w-full justify-center flex items-center">Ok</button>
+				</div>
 			<?php endif; ?>
 
-			<?php if(isset($_SESSION['error'])): ?>
-			<div id="error-msg" class="mt-12 w-full  black-background rounded-md shadow-xl px-6 py-8">
+			<?php if($this->session->flashdata('error')): ?>
+				<div id="error-msg" class="mt-12 w-full text-white black-background rounded-md shadow-xl px-6 py-8">
 
-				<h2 class="font-semibold text-white">There was an error.</h2>
-				<p class="mt-2 text-sm text-white leading-relaxed"><?php echo validation_errors() ?></p>
-				<br/>
-				<button id="error-btn" class="btn bg-danger-600 text-white hover:text-danger-600 hover:bg-white rounded-md w-full justify-center flex items-center">Ok</button>
+					<h2 class="font-semibold text-white">There was an error.</h2>
+					<p class="mt-2 text-sm text-white leading-relaxed">
+						<?php echo $this->session->flashdata('error'); ?>
+					</p>
+					<br/>
+					<button id="error-btn" class="btn bg-danger-600 text-white hover:text-danger-600 hover:bg-white rounded-md w-full justify-center flex items-center">Ok</button>
 
-				<?php
+					<?php
 
-				?>
-			</div>
+					?>
+				</div>
 			<?php endif; ?>
 	</div>
 
