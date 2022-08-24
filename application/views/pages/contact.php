@@ -47,7 +47,7 @@
 			<a href="index.html"><img src="<?php  echo base_url() ?>assets/images/app/favicon-01.png" class="mx-auto" alt=""></a>
 			<h3 class="my-6 text-2xl leading-normal font-medium text-center">Get in touch !</h3>
 
-			<?php echo form_open(base_url() . 'emailforms/send') ?>
+			<?php echo form_open(base_url() . 'contact') ?>
 			<!--
 			<form method="post" name="myForm" id="myForm" onsubmit="return validateForm()">
 			-->

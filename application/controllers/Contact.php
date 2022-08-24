@@ -16,6 +16,7 @@ class Contact extends CI_Controller{
 		if($this->form_validation->run() === FALSE)
 		{
 			$this->session->set_flashdata('error', validation_errors());
+
 			//load header, page & footer
 			$this->load->view('templates/header');
 			$this->load->view('templates/navbar');
