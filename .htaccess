@@ -1,4 +1,6 @@
 RewriteEngine on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
 RewriteCond $1 !^(index\.php|datatables|assets|images|js|css|uploads|favicon.png)
 RewriteCond %(REQUEST_FILENAME) !-f
 RewriteCond %(REQUEST_FILENAME) !-d
