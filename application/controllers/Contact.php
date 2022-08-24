@@ -27,8 +27,8 @@ class Contact extends CI_Controller{
 		{
 
 			$to = "info@leanquatro.com";
-			$subject = "Contact Form Message";
-			$message = $this->input->post('message') . "\r\n\r\n" . "From: " . $this->input->post('name') . " <" . $this->input->post('email') . ">";
+			$subject = "Contact Form Message from " . $this->input->post('email');
+			$message = $this->input->post('message') . "<br><br/>" . "From: " . $this->input->post('name') . "<br>" . "Email: " . $this->input->post('email');
 			$headers = "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 			$headers .= 'From: <info@leanquatro.com>' . "\r\n";
