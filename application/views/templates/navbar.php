@@ -7,7 +7,7 @@
                         <img src="<?php echo base_url() ?>assets/images/app/logoweb-dark-01.png" class="l-dark" height="24" alt="">
                         <img src="<?php echo base_url() ?>assets/images/app/light-01.png" class="l-light" height="24" alt="">
                     </span>
-			<img src="images/logo-light.png" height="24" class="logo-dark-mode" alt="">
+			<img src="<?php echo base_url() ?>assets/images/app/light-01.png" height="24" class="logo-dark-mode" alt="">
 		</a>
 
 		<!-- End Logo container-->

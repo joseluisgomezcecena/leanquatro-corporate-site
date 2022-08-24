@@ -20,7 +20,7 @@ class Contact extends CI_Controller{
 			//load header, page & footer
 			$this->load->view('templates/header');
 			$this->load->view('templates/navbar');
-			$this->load->view('pages/contact',$data); //loading page and data
+			$this->load->view('pages/index',$data); //loading page and data
 			$this->load->view('templates/footer');
 		}
 		else
