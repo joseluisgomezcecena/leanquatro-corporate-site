@@ -1,8 +1,6 @@
 RewriteEngine on
 #RewriteCond %{HTTP:X-Forwarded-Proto} !https
 #RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
-Header add Access-Control-Allow-Origin "leanquatro.com"
-Header add Access-Control-Allow-Origin "http://leanquatro.com"
 Header add Access-Control-Allow-Origin "https://www.leanquatro.com"
 RewriteCond $1 !^(index\.php|datatables|assets|images|js|css|uploads|libs|favicon.png)
 RewriteCond %(REQUEST_FILENAME) !-f
