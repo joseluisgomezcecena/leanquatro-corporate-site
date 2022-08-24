@@ -11,6 +11,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //pages
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages/view';
-$route['emailforms/send'] = 'emailforms/send';
+$route['contact'] = 'contact/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

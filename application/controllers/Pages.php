@@ -11,27 +11,14 @@ class Pages extends CI_Controller
 
 		$data['title'] = ucfirst($page);
 
+		//load header, page & footer
+		$this->load->view('templates/header');
+		$this->load->view('templates/navbar');
+		$this->load->view('templates/hero');
+		$this->load->view('pages/' . $page, $data); //loading page and data
+		$this->load->view('templates/footer');
 
-		if($page == "contact")
-		{
-			//load header, page & footer
-			$this->load->view('templates/header');
-			$this->load->view('templates/navbar');
-			$this->load->view('pages/' . $page, $data); //loading page and data
-			$this->load->view('templates/footer');
-		}
-		else
-		{
-			//load header, page & footer
-			$this->load->view('templates/header');
-			$this->load->view('templates/navbar');
-			$this->load->view('templates/hero');
-			$this->load->view('pages/' . $page, $data); //loading page and data
-			$this->load->view('templates/footer');
 
-		}
 	}
-
-
 
 }
