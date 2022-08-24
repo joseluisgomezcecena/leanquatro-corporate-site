@@ -34,8 +34,10 @@
 						</div><!--end col-->
 
 						<div class="lg:col-span-3 md:col-span-4">
-							<h5 class="footer-head">Newsletter</h5>
-							<p class="mt-6">Sign up and receive the latest tips via email.</p>
+							<h5 class="footer-head">Contact Us</h5>
+							<p class="mt-6">Contact us and schedule a demo.</p>
+							<a class="btn btn-light rounded-md mt-5" href="<?php echo base_url() ?>contact">Contact</a>
+							<!--
 							<form method="post">
 								<div class="grid grid-cols-1">
 									<div class="foot-subscribe my-3">
@@ -49,6 +51,7 @@
 									<button type="submit" id="submitsubscribe" name="send" class="btn btn-primary rounded-md">Subscribe</button>
 								</div>
 							</form>
+							-->
 						</div><!--end col-->
 					</div><!--end grid-->
 				</div><!--end col-->
